@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <main class="main-container">
+      <section class="main-container__background-section">
+
+        <!-- PARTE FRONTAL DE LA TARJETA -->
+        <div class="card">
+          <img class="card__logo" src="img/logo.png" alt="logo" width="50">
+          <p class="card__number">0000 0000 0000 0000</p>
+          <div class="card__details">
+            <p class="card__details-name">Marisol Portillo</p>
+            <p> <span class="card__month">00</span>/<span class="card__year">00</span></p>
+          </div>
+        </div>
+
+        <!-- REVERSA DE LA TARJETA -->
+        <div class="card-reverse">
+        <p class="card-reverse__cvv">000</p>
+        </div>
+      </section>
+
+      <!-- Formulario para llenar datos -->
+      <section class="main-container__form-section">
+        <form class="form" action="">
+          <label class="form__label" for="cardNumber">Número de Tarjeta</label>
+          <input class="form__input" name="cardNumber" id="cardNumber" type="text"  maxlength="16" autocomplete="off" placeholder="ej. 4137 5624 7524 9631" required>
+          <div class="form__inputNumber--error"></div>
+          
+
+          <label class="form__label" for="cardHolderName">Nombre</label>
+          <input class="form__input" name="cardHolderName" id="cardHolderName" type="text" placeholder="ej. Marisol Portillo" required>
+          <div class="form__inputHolderName--error"></div>
+
+          <!-- esta sección se dividirá en 6 espacios -->
+          <div class="form__date-cvv">
+
+            <label class="form__label" for="cardMonth">Fecha de Exp. (MM/AA)</label>
+            <label class="form__label" for="cardCvc">CVV</label>
+            <div class="form__date">
+              <input class="form__input" type="text" maxlength="2" name="cardMonth" id="cardMonth" placeholder="MM" required>
+              <input class="form__input" type="text" maxlength="2" name="cardYear" id="cardYear" placeholder="AA" required>
+            </div>
+
+            <input class="form__input" type="text" maxlength="3" name="cardCvv" id="cardCvv" placeholder="000" required>
+
+            <div class="forms__errors-container">
+             <div class="form__input-mm--error"></div>
+             <div class="form__input-aa--error"></div>
+            </div>
+
+            <div class="form__input-cvv--error"></div>
+          </div>
+
+          <label class="form__label" for="email">Correo</label>
+          <input class="form__input" name="email" id="email" type="text" autocomplete="off" placeholder="ej. portillo.marisol@gmail.com">
+          
+          <div>
+            <button class="button" id="pay">Validar</button>
+          </div>
+          
+          <!-- <div>
+            <input class="form__submit" id="pay" type="submit" value="Pagar">
+          </div> -->
+
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
