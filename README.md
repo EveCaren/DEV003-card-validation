@@ -5,7 +5,7 @@
 * [1. Principales usuarios](#1-principales-usuarios)
 * [2. Objetivos](#2-objetivos)
 * [3. Proceso de trabajo](#3-proceso-de-trabajo)
-***
+
 
 ## 1. Principales usuarios
 
