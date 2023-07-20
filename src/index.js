@@ -4,12 +4,18 @@ import validator from './validator.js';
 
 
 //Elementos del DOM
+const name = document.getElementById("cardHolderName");
+const emailUser = document.getElementById("email");
 const numberCard = document.getElementById("cardNumber");
 const ccCvv = document.getElementById("cardCvv");
 const btnCheck = document.getElementById("pay");
 
 const errorNumber = document.querySelector(".form__inputNumber--error")
 const errorCvv = document.querySelector(".form__input-cvv--error")
+
+const view1 = document.getElementById("main-container");
+const errorMsg = document.getElementById("sorry");
+const validMsg= document.getElementById("validCard");
 
 //Input número de tarjeta
 numberCard.addEventListener("input", event => {
@@ -53,12 +59,33 @@ function showError(divInput, divError, msgError, show = true){
   }
 }
 
-btnCheck.addEventListener("click", function () {
+btnCheck.addEventListener("click", (e) => {
+  e.preventDefault();
   const mascara = validator.maskify(numberCard.value);
   if (validator.isValid(numberCard.value)) {
-    alert("Tu tarjeta " + mascara + " es válida.");
+    // alert("Tu tarjeta " + mascara + " es válida.");
+    view1.style.display = "none";
+    validMsg.style.display= "block";
+
+    document.getElementById("printName").innerHTML = "Nombre : " + name.value;
+    document.getElementById("printNumber").innerHTML = "Número de tarjeta : " + mascara;
+    document.getElementById("printEmail").innerHTML = "Correo : " + emailUser.value;
   } 
   else {
-    alert("Hubo un error, por favor revisar datos ingresados")
+    // alert("Hubo un error, por favor revisar datos ingresados")
+    view1.style.display = "none";
+    errorMsg.style.display = "block";
   }
 });
+
+// evento del boton volver
+const back = document.getElementById("buttonReturn");
+back.addEventListener("click", function() {
+  location.reload();
+});
+
+// evento del botón volver a inicio
+const comeHome = document.getElementById("buttonBack");
+comeHome.addEventListener("click", function() {
+  location.reload();
+})
