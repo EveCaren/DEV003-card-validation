@@ -5,6 +5,13 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+.titleHome {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    /* font-style:initial; */
+    font-size: 20px;
+    color: rgb(13, 16, 16);                                            
+}
 
 .main-container{
     background: rgba(5, 7, 12, 0.18);
@@ -33,7 +40,7 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    border-radius: 4px;
+    border-radius: 3%;
     top: 126px;
     left: 60px;
 }
@@ -42,7 +49,6 @@ body{
     font-family: monospace;
     font-size: 1.10em;
     color: aliceblue;
-    width: 258px;
     height: 160px;
     padding: 12px;
     background-image: url(./img/card_back.png);
@@ -54,13 +60,13 @@ body{
 .card-reverse__cvv{
     margin-top: 75px;
     text-align: right;
-    padding-right: 20px;
+    padding-right: 50px;
 }
 
 .form__label{
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 0.60em;
+    font-size: 0.70em;
     letter-spacing: 2px;
     display: block;
     margin-bottom: 8px;
@@ -70,6 +76,17 @@ body{
 .form__input{
     width: 100%;
     height: 25px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.80em;
+    border: 1px solid;
+    padding-left: 10px;
+    outline: none;
+}
+.numberMonth, .numberYear{
+    width: 100%;
+    height: 29px;
     margin-bottom: 18px;
     border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
@@ -88,8 +105,35 @@ body{
     gap: 10px;
 }
 .button{
+    width: 100px;
+    height: 30px;
     display: inline-block;
-    margin-top: 30px;
-    background-color: rgb(136, 207, 200);
-    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(126, 208, 222);
+    border: 1px solid;
+    border-radius: 4px;
 }
+.buttonReturn {
+    width: 100px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.buttonDiv, .invalidDiv, .validCard {
+    text-align: center;
+}
+.details {
+    margin: 0 auto;
+    background:rgb(239, 239, 239);
+    width: 400px;
+    height: 120px;
+    padding: 20px 0px;
+}
+.buttonBack {
+    width: 120px;
+    height: 25px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
